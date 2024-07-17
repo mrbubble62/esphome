@@ -35,8 +35,8 @@ SH8601 = sh8601_ns.class_(
     "SH8601", display.Display, display.DisplayBuffer, cg.Component, spi.SPIDevice
 )
 
-Contrast = sh8601_ns.enum("Contrast")
-CONTRAST = {"Off": Contrast.Off, "Low": Contrast.Low, "Medium": Contrast.Medium, "High": Contrast.High}
+# Contrast = sh8601_ns.enum("Contrast")
+# CONTRAST = {"Off": Contrast.Off, "Low": Contrast.Low, "Medium": Contrast.Medium, "High": Contrast.High}
 
 ColorOrder = display.display_ns.enum("ColorMode")
 
