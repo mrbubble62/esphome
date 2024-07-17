@@ -110,16 +110,16 @@ void SH8601::reset_params_(bool ready) {
 void SH8601::set_contrast_(uint8_t contrast) {
   switch (contrast)
   {
-  case ContrastOff:
+  case Off:
     this->write_command_(CONTRAST, 0x00);
     break;
-  case LowContrast:
+  case Low:
     this->write_command_(CONTRAST, 0x05);
     break;
-  case MediumContrast:
+  case Medium:
     this->write_command_(CONTRAST, 0x06);
     break;
-  case HighContrast:
+  case High:
     this->write_command_(CONTRAST, 0x07);
     break;
   default:
