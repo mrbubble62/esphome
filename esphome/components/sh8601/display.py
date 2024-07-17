@@ -111,7 +111,7 @@ async def to_code(config):
     cg.add(var.set_color_mode(config[CONF_COLOR_ORDER]))
     cg.add(var.set_invert_colors(config[CONF_INVERT_COLORS]))
     cg.add(var.set_brightness(config[CONF_BRIGHTNESS]))
-    cg.add(var.set_brightness(config[CONF_CONTRAST]))
+    # cg.add(var.set_contrast(config[CONF_CONTRAST]))
     if enable_pin := config.get(CONF_ENABLE_PIN):
         enable = await cg.gpio_pin_expression(enable_pin)
         cg.add(var.set_enable_pin(enable))
