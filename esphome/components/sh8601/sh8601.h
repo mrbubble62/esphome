@@ -99,16 +99,15 @@ static inline void put16_be(uint8_t *buf, uint16_t value) {
   buf[1] = value;
 }
 
-enum Contrast {
-  Off,
-  Low,
-  Medium,
-  High
-};
-
 class SH8601 : public display::DisplayBuffer,
 public spi::SPIDevice<spi::BIT_ORDER_MSB_FIRST, spi::CLOCK_POLARITY_LOW, spi::CLOCK_PHASE_LEADING, spi::DATA_RATE_1MHZ> {
  public:
+  enum Contrast {
+    Off,
+    Low,
+    Medium,
+    High
+  };
   void update() override;
   void setup() override;
   display::ColorOrder get_color_mode() { return this->color_mode_; }
@@ -188,11 +187,11 @@ public spi::SPIDevice<spi::BIT_ORDER_MSB_FIRST, spi::CLOCK_POLARITY_LOW, spi::CL
   bool mirror_x_{};
   bool mirror_y_{};
   uint8_t brightness_{0xD0};
-  Contrast contrast_{Off};
+  Contrast contrast_{Contrast.Off};
 
   esp_lcd_panel_handle_t handle_{};
 };
 
-}  // namespace qspi_amoled
+}  // namespace sh8601
 }  // namespace esphome
 #endif
