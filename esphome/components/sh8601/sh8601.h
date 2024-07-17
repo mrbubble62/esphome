@@ -102,12 +102,12 @@ static inline void put16_be(uint8_t *buf, uint16_t value) {
 class SH8601 : public display::DisplayBuffer,
 public spi::SPIDevice<spi::BIT_ORDER_MSB_FIRST, spi::CLOCK_POLARITY_LOW, spi::CLOCK_PHASE_LEADING, spi::DATA_RATE_1MHZ> {
  public:
-  enum Contrast {
-    Off,
-    Low,
-    Medium,
-    High
-  };
+  // enum Contrast {
+  //   Off,
+  //   Low,
+  //   Medium,
+  //   High
+  // };
   void update() override;
   void setup() override;
   display::ColorOrder get_color_mode() { return this->color_mode_; }

@@ -13,7 +13,6 @@ from esphome.const import (
     CONF_HEIGHT,
     CONF_LAMBDA,
     CONF_BRIGHTNESS,
-    CONF_CONTRAST,
     CONF_ENABLE_PIN,
     CONF_OFFSET_HEIGHT,
     CONF_OFFSET_WIDTH,
@@ -90,7 +89,6 @@ CONFIG_SCHEMA = cv.All(
                 cv.Optional(CONF_BRIGHTNESS, default=0xD0): cv.int_range(
                     0, 0xFF, min_included=True, max_included=True
                 ),
-                cv.Optional(CONF_CONTRAST, default="Off"): cv.enum(CONTRAST),
             }
         ).extend(
             spi.spi_device_schema(
