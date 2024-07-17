@@ -187,7 +187,7 @@ public spi::SPIDevice<spi::BIT_ORDER_MSB_FIRST, spi::CLOCK_POLARITY_LOW, spi::CL
   bool mirror_x_{};
   bool mirror_y_{};
   uint8_t brightness_{0xD0};
-  uint8_t contrast_{0x00};
+  Contrast contrast_{Off};
 
   esp_lcd_panel_handle_t handle_{};
 };
