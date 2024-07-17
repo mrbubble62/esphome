@@ -139,7 +139,7 @@ public spi::SPIDevice<spi::BIT_ORDER_MSB_FIRST, spi::CLOCK_POLARITY_LOW, spi::CL
     this->brightness_ = brightness;
     this->reset_params_();
   }
-  void set_contrast_(Contrast contrast) //{ this->contrast_ = contrast; }
+  void set_contrast_(Contrast contrast); //{ this->contrast_ = contrast; }
   
   void set_offsets(int16_t offset_x, int16_t offset_y) {
     this->offset_x_ = offset_x;
