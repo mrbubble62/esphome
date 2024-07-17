@@ -104,7 +104,7 @@ void SH8601::reset_params_(bool ready) {
     mad |= MADCTL_MY;
   this->write_command_(MADCTL_CMD, &mad, 1);
   this->write_command_(BRIGHTNESS, &this->brightness_, 1);
-  this->write_command_(CONTRAST, &this->contrast_, 1);
+  set_contrast_(&this->contrast_);
 }
 
 void SH8601::set_contrast_(uint8_t contrast) {
