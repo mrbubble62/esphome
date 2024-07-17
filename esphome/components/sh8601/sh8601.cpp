@@ -108,25 +108,25 @@ void SH8601::reset_params_(bool ready) {
   //set_contrast_(&this->contrast_);
 }
 
-void SH8601::set_contrast_(Contrast contrast) {
-  switch (contrast)
-  {
-  case Off:
-    this->write_command_(CONTRAST, 0x00);
-    break;
-  case Low:
-    this->write_command_(CONTRAST, 0x05);
-    break;
-  case Medium:
-    this->write_command_(CONTRAST, 0x06);
-    break;
-  case High:
-    this->write_command_(CONTRAST, 0x07);
-    break;
-  default:
-    break;
-  }
-}
+// void SH8601::set_contrast_(Contrast contrast) {
+//   switch (contrast)
+//   {
+//   case Off:
+//     this->write_command_(CONTRAST, 0x00);
+//     break;
+//   case Low:
+//     this->write_command_(CONTRAST, 0x05);
+//     break;
+//   case Medium:
+//     this->write_command_(CONTRAST, 0x06);
+//     break;
+//   case High:
+//     this->write_command_(CONTRAST, 0x07);
+//     break;
+//   default:
+//     break;
+//   }
+// }
 
 void SH8601::write_init_sequence_() {
   this->write_command_(SLEEP_OUT);
