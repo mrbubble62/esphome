@@ -35,6 +35,10 @@ sh8601_ns = cg.esphome_ns.namespace("sh8601")
 SH8601 = sh8601_ns.class_(
     "SH8601", display.Display, display.DisplayBuffer, cg.Component, spi.SPIDevice
 )
+
+Contrast = sh8601_ns.enum("Contrast")
+CONTRAST = {"Off": Contrast.Off, "Low": Contrast.Low, "Medium": Contrast.Medium, "High": Contrast.High}
+
 ColorOrder = display.display_ns.enum("ColorMode")
 
 COLOR_ORDERS = {
@@ -86,9 +90,7 @@ CONFIG_SCHEMA = cv.All(
                 cv.Optional(CONF_BRIGHTNESS, default=0xD0): cv.int_range(
                     0, 0xFF, min_included=True, max_included=True
                 ),
-                cv.Optional(CONF_CONTRAST, default=0x00): cv.int_range(
-                    0, 0x07, min_included=True, max_included=True
-                ),
+                cv.Optional(CONF_CONTRAST, default=Off): cv.enum(CONTRAST),
             }
         ).extend(
             spi.spi_device_schema(
