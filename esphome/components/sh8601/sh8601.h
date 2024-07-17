@@ -1,5 +1,5 @@
-//
-// Created by mrbubble62 on 7/14/24.
+ //
+// Created by mrbubble62  on 7/14/24.
 //
 #pragma once
 
@@ -32,6 +32,7 @@
 #define SH8601_R_RDSIGMODE 0x0E    // Read Display Signal Mode
 #define SH8601_R_RDSELFDIAG 0x0F   // Read Display Self-Diagnostic Result
 
+
 namespace esphome {
 namespace sh8601 {
 
@@ -62,17 +63,17 @@ static const uint8_t MADCTL_CMD = 0x36;
 static const uint8_t IDMOFF = 0x38; 
 static const uint8_t IDMON = 0x39; 
 static const uint8_t PIXFMT = 0x3A; //COLMOD
-static const uint8_t TESCAN = 0x44h;
+static const uint8_t TESCAN = 0x44;
 static const uint8_t RDSCL = 0x45;
-static const uint8_t SPIRDON = 0x46h;
-static const uint8_t SPIRDOFF = 0x47h;
+static const uint8_t SPIRDON = 0x46;
+static const uint8_t SPIRDOFF = 0x47;
 //AODOFF(48h) / AODON(49h)
 //Deep Standby Control(4Fh)
 //AOD_WRDISBV(4Ah)
 //AOD_RDDISBV(4Bh)
 static const uint8_t BRIGHTNESS = 0x51; //WRDISBV
 static const uint8_t RDDISBV = 0x52;
-static const uint8_t WRCTRLD1 = 0x53h;
+static const uint8_t WRCTRLD1 = 0x53;
 //RDCTRLD1(54h)
 //WRCTRLD2(55h)
 //RDCTRLD2(56h)
@@ -82,7 +83,7 @@ static const uint8_t WRCTRLD1 = 0x53h;
 //static const uint8_t SWIRE2 = 0x5B;
 
 static const uint8_t CONTRAST = 0x58;
-static const uint8_t SPI_MODE = 0xC4h; //00h
+static const uint8_t SPI_MODE = 0xC4; //00h
 static const uint8_t PAGESEL = 0xFE;
 
 static const uint8_t MADCTL_MY = 0x80;   ///< Bit 7 Bottom to top
