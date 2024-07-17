@@ -139,7 +139,7 @@ public spi::SPIDevice<spi::BIT_ORDER_MSB_FIRST, spi::CLOCK_POLARITY_LOW, spi::CL
     this->brightness_ = brightness;
     this->reset_params_();
   }
-  void set_contrast_(Contrast contrast) { this->contrast_ = contrast; }
+  void set_contrast_(Contrast contrast) //{ this->contrast_ = contrast; }
   
   void set_offsets(int16_t offset_x, int16_t offset_y) {
     this->offset_x_ = offset_x;
@@ -187,7 +187,7 @@ public spi::SPIDevice<spi::BIT_ORDER_MSB_FIRST, spi::CLOCK_POLARITY_LOW, spi::CL
   bool mirror_x_{};
   bool mirror_y_{};
   uint8_t brightness_{0xD0};
-  Contrast contrast_{Contrast.Off};
+  uint8_t contrast_{0x00};
 
   esp_lcd_panel_handle_t handle_{};
 };
