@@ -107,7 +107,7 @@ void SH8601::reset_params_(bool ready) {
   set_contrast_(&this->contrast_);
 }
 
-void SH8601::set_contrast_(uint8_t contrast) {
+void SH8601::set_contrast_(Contrast contrast) {
   switch (contrast)
   {
   case Off:
