@@ -100,10 +100,10 @@ static inline void put16_be(uint8_t *buf, uint16_t value) {
 }
 
 enum Contrast {
-  ContrastOff,
-  LowContrast,
-  MediumContrast,
-  HighContrast
+  Off,
+  Low,
+  Medium,
+  High
 };
 
 class SH8601 : public display::DisplayBuffer,
